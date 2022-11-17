@@ -1,0 +1,21 @@
+/* Write your CSS here */
+.country {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.image {
+  height: 150px;
+  width: 200px;
+}
+.country-name {
+  font-size: 14px;
+}
+
+@media not screen and (min-width: 576px) {
+  .country {
+    width: 400px;
+  }
+}
