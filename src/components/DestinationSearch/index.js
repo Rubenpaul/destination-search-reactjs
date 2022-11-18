@@ -14,18 +14,27 @@ class DestinationSearch extends Component {
     const {destinationsList} = this.props
     const {searchInput} = this.state
     const filteredList = destinationsList.filter(eachUser =>
-      eachUser.name.includes(searchInput),
+      eachUser.name.toLowerCase().includes(searchInput.toLowerCase()),
     )
 
     return (
       <div className="bg-container">
         <div className="search-container">
           <h1 className="heading">Destination Search</h1>
-          <input
-            type="search"
-            onChange={this.onChangeSearchInput}
-            value={searchInput}
-          />
+          <div className="search-box-container">
+            <input
+              type="search"
+              className="input-item"
+              onChange={this.onChangeSearchInput}
+              value={searchInput}
+            />
+            <img
+              className="search-icon"
+              src="https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png"
+              alt="search icon"
+            />
+          </div>
+
           <ul className="country-container">
             {filteredList.map(eachUser => (
               <DestinationItem
