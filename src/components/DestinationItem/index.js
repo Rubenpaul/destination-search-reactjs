@@ -14,3 +14,4 @@ const DestinationItem = props => {
 }
 
 export default DestinationItem
+
